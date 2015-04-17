@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<body background="http://previews.123rf.com/images/Loopall/Loopall1302/Loopall130200015/17726397-paper-bag-with-popcorn-and-movie-reel-vector-illustration-isolated-on-white-background-EPS10-Transpa-Stock-Vector.jpg">
   <title>Cinewow</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body><center>
 
 <%= link_to "Home", root_path %>
 <%= link_to "Favorite Movies", favorites_path %>
 <%= link_to 'Log out', destroy_user_session_path, :method => :delete %>
-<%= yield %>
+</center>
+<p><%= yield %></p>
 
 </body>
 </html>

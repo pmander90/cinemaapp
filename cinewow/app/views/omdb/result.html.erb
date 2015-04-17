@@ -1,5 +1,5 @@
 <% @response= @response.parsed_response %>
-
+<center>
 <ul>
 <% @response.each do |key, val| %>
 	<% if key != "Poster" && key != "Response" && key != "imdbID"%>
@@ -15,4 +15,4 @@
 	<%= hidden_field_tag(:year, @response["Year"]) %>
 	<%= hidden_field_tag(:imdbid, @response["imdbID"]) %>
 	<%= submit_tag "Add to favorite" %>
-<%end%>
+<%end%></center>
