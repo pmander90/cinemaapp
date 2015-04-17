@@ -1,0 +1,11 @@
+<% @response= @response.parsed_response %>
+
+<ul>
+<% @response.each do |key, val| %>
+	<% if key != "Poster" && key != "Response" %>
+	<li><%= "#{key}: #{val}" %></li>
+	<%end%>
+<%end%>
+</ul>
+
+<img src= <%=@response["Poster"]%> >
