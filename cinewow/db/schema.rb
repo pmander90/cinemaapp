@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20150417145902) do
 
   create_table "movies", force: :cascade do |t|
     t.string  "title"
+    t.integer "year"
     t.integer "users_id"
   end
 

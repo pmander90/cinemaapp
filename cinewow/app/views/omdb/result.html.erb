@@ -2,7 +2,7 @@
 
 <ul>
 <% @response.each do |key, val| %>
-	<% if key != "Poster" && key != "Response" %>
+	<% if key != "Poster" && key != "Response" && key != "imdbID"%>
 	<li><%= "#{key}: #{val}" %></li>
 	<%end%>
 <%end%>
