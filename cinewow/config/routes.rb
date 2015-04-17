@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   root 'omdb#index'
   get '/search', to: 'omdb#show'
+  get '/favorites', to: 'movies#index'
+  post '/add', to: 'movies#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,7 +1,6 @@
 class OmdbController < ApplicationController
 
 	def index
-		@response = HTTParty.get("http://www.omdbapi.com/")
 	end
 
 	def show
@@ -10,4 +9,5 @@ class OmdbController < ApplicationController
 		@response = HTTParty.get("http://www.omdbapi.com/?t=#{title}&y=#{year}")
 		render :result
 	end
+
 end

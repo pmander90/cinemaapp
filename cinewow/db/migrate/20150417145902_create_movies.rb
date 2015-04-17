@@ -3,7 +3,8 @@ class CreateMovies < ActiveRecord::Migration
     create_table :movies do |t|
     	t.string :title
     	t.integer :year
-    	t.belongs_to :users
+    	t.string	:imdbid
+    	t.belongs_to :user
     end
   end
 end

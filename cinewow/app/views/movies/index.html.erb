@@ -1,0 +1,16 @@
+<h2>My Favorite Movies </h2>
+<ul>
+<% @movies.each do |movie| %>
+	<li><%= "#{movie.title}"%></li>
+	<ul>
+		<li><%= "Year: #{movie.year}" %></li>
+		<li><%= "imdbID: #{movie.imdbid}" %></li>	
+		<li><%= form_tag "/search", method: :get do %>
+			<%= hidden_field_tag(:title, "#{movie.title}") %>
+			<%= hidden_field_tag(:year, movie.year) %>
+			<%= submit_tag "See Movie Details" %>
+		<%end%></li>
+
+	</ul>
+<%end%>
+</ul>

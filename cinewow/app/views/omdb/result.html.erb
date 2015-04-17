@@ -9,3 +9,10 @@
 </ul>
 
 <img src= <%=@response["Poster"]%> >
+
+<%= form_tag '/add', method: :post do%>
+	<%= hidden_field_tag(:title, @response["Title"]) %>
+	<%= hidden_field_tag(:year, @response["Year"]) %>
+	<%= hidden_field_tag(:imdbid, @response["imdbID"]) %>
+	<%= submit_tag "Add to favorite" %>
+<%end%>
